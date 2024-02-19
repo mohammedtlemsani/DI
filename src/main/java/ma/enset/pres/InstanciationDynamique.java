@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class InstanciationDynamique {
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(new File("src/pres/config.txt"));
+        Scanner scanner = new Scanner(new File("config.txt"));
         String daoClassName = scanner.nextLine();
         Class cDao = Class.forName(daoClassName);
         IDao dao = (IDao) cDao.newInstance();

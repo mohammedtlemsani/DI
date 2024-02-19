@@ -1,2 +1,2 @@
-dao.IDaoImp
-metier.IMetierImp
+ma.enset.dao.IDaoImp
+ma.enset.metier.IMetierImp
