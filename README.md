@@ -1,19 +1,22 @@
-# Utilisation de Spring Framework pour l'injection de dépendances
+# Projet Java avec Spring
 
-## Introduction
-Ce compte rendu présente une analyse détaillée de l'utilisation de Spring Framework pour l'injection de dépendances dans un projet Java. Nous examinons le code source fourni, discutons de sa structure, de ses fonctionnalités et de son utilisation, ainsi que des avantages et des limitations de l'approche utilisée.
+Ce projet démontre l'utilisation de Spring Framework pour gérer l'injection de dépendances dans une application Java.
 
-## 1. Vue d'ensemble du Projet
-Dans ce projet, nous avons un exemple simple d'application Java utilisant Spring Framework pour l'injection de dépendances. Il comprend des interfaces et des implémentations pour la récupération de données à partir d'une source externe et leur manipulation.
+## Contenu du projet
 
-## 2. Analyse du Code Source
-Le code est divisé en plusieurs packages. 
-- `ma.enset.dao`: Contient les interfaces et implémentations pour la récupération de données.
-- `ma.enset.metier`: Contient les interfaces et implémentations pour la manipulation des données.
+### Packages
 
-## 3. Utilisation de Spring Framework
-Le projet utilise Spring Framework pour l'injection de dépendances, simplifiant la gestion des composants et améliorant la modularité.
+- **dao**: Contient l'interface `IDao` et son implémentation `IDaoImp`.
+- **metier**: Contient l'interface `IMetier` et son implémentation `IMetierImp`.
+- **pres**: Contient des classes de présentation pour illustrer différentes méthodes d'instanciation des objets métier.
 
+## Méthodes d'instanciation
 
-## 4. Conclusion
-Dans l'ensemble, l'utilisation de Spring Framework pour l'injection de dépendances dans ce projet présente de nombreux avantages en termes de modularité et de maintenabilité du code.
+1. **Instanciation Statique**: Les objets sont instanciés directement dans le code.
+2. **Version Dynamique**: Les classes sont instanciées dynamiquement à partir de noms de classe lus depuis un fichier de configuration.
+3. **Spring avec Annotation**: Utilisation de Spring avec des annotations pour la configuration.
+4. **Spring avec XML**: Utilisation de Spring avec une configuration XML.
+
+## Comment exécuter
+
+Exécutez les classes de présentation correspondantes pour tester chaque méthode d'instanciation. Assurez-vous d'avoir toutes les dépendances de Spring dans votre projet et, pour l'instanciation dynamique, un fichier de configuration `config.txt` contenant les noms de classe des implémentations `IDao` et `IMetier`.
